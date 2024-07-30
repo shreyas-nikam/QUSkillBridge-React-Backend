@@ -31,7 +31,7 @@ router.delete('/:id', passport.authenticate('jwt', { session: false }), async (r
 });
 
 // get the list of jobs for a persona
-router.get('/personaJobs/:personaId', passport.authenticate('jwt', { session: false }), async (req, res) => {
+router.get('/personaJobs/:userId', passport.authenticate('jwt', { session: false }), async (req, res) => {
     await getJobsByPersonaRoute(req, res);
 });
 

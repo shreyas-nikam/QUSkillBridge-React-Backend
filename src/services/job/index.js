@@ -1,4 +1,5 @@
 import { jobModel } from "../../schemas/job.schema";
+import { userModel } from "../../schemas/user.schema";
 
 export const getJobsRoute = async (req, res) => {
     let jobsObjectArray = [];
@@ -92,7 +93,12 @@ export const deleteJobRoute = async (req, res) => {
 };
 
 export const getJobsByPersonaRoute = async (req, res) => {
-    const { personaId } = req.params;
+    const { userId } = req.params;
+    const user = await userModel.find({ _id: userId });
+    if (!user) {
+        return res.status(404).send({ message: "User not found" });
+    }
+    const personaId = user.persona;
     const jobs = await jobModel.find({
         persona: personaId
     });
