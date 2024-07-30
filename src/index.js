@@ -16,6 +16,9 @@ import {
   tagRoutes,
   permissionRoutes,
   imageRoutes,
+  jobRoutes,
+  courseRoutes,
+  personaRoutes,
 } from "./routes";
 import { dbConnect } from "./mongoose";
 import path from "path";
@@ -66,6 +69,9 @@ app.use("/tags", tagRoutes);
 app.use("/items", itemRoutes);
 app.use("/permissions", permissionRoutes);
 app.use("/public/images", imageRoutes);
+app.use("/jobs", jobRoutes);
+app.use("/courses", courseRoutes);
+app.use("/personas", personaRoutes);
 
 if (process.env.SCHEDULE_HOUR) {
   cron.schedule(`0 */${process.env.SCHEDULE_HOUR} * * *'`, () => {

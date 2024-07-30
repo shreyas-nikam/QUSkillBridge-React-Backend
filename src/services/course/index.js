@@ -55,11 +55,6 @@ export const getCoursesRoute = async (req, res) => {
     });
 
     const sentData = { data: [...coursesObjectArray] };
-
-    // only return if requested by admin
-    if (req.user.role === "admin") {
-        return res.status(200).send(sentData);
-    }
     
     return res.status(200).send(sentData);
 };

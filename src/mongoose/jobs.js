@@ -1,37 +1,3 @@
-import { personaModel } from "../schemas/persona.schema.js";
-
-const software_engineer_persona = new personaModel({
-    name: "Software Engineer",
-    description: "Software engineers are responsible for developing, testing, deploying, and maintaining software applications. They work closely with product managers, designers, and other engineers to create high-quality software products. Software engineers use programming languages, frameworks, and tools to build scalable and reliable software solutions. They are skilled problem solvers who can analyze complex technical challenges and design effective solutions. Software engineers are detail-oriented and have a passion for writing clean, efficient code. They are constantly learning and adapting to new technologies to stay current in the fast-paced software development industry.",
-});
-const ai_engineer_persona = new personaModel({
-    name: "AI Engineer",
-    description: "AI engineers are responsible for developing artificial intelligence (AI) and machine learning (ML) solutions. They work on cutting-edge technologies to build intelligent systems that can learn, reason, and make decisions. AI engineers use algorithms, data, and models to create AI applications that can perform tasks such as image recognition, natural language processing, and predictive analytics. They work closely with data scientists, software engineers, and domain experts to develop AI solutions that meet business requirements. AI engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of AI concepts and are passionate about building intelligent systems that can solve complex problems.",
-});
-const data_scientist_persona = new personaModel({
-    name: "Data Scientist",
-    description: "Data scientists are responsible for analyzing large datasets to extract valuable insights and make data-driven decisions. They work with structured and unstructured data to identify trends, patterns, and correlations that can inform business strategies. Data scientists use statistical analysis, machine learning, and data visualization techniques to uncover hidden patterns in data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data scientists are skilled in programming, data analysis, and machine learning. They have a strong background in mathematics, statistics, and computer science. Data scientists are curious, analytical, and detail-oriented professionals who are passionate about working with data to drive business success.",
-});
-const product_manager_persona = new personaModel({
-    name: "Product Manager",
-    description: "Product managers are responsible for defining the vision, strategy, and roadmap for a product or service. They work closely with cross-functional teams to develop and launch products that meet customer needs and business goals. Product managers conduct market research, gather customer feedback, and define product requirements to guide the development process. They collaborate with designers, engineers, and other stakeholders to deliver high-quality products on time and within budget. Product managers are skilled communicators who can articulate a clear product vision and motivate teams to achieve their goals. They have a deep understanding of user needs, market trends, and competitive landscape. Product managers are strategic thinkers who can prioritize initiatives and make data-driven decisions to drive product success.",
-});
-const quant_researcher_persona = new personaModel({
-    name: "Quantitative Researcher",
-    description: "Quantitative researchers are responsible for developing mathematical models and algorithms to analyze financial markets and make trading decisions. They work in quantitative finance, algorithmic trading, and risk management to develop quantitative strategies that generate profits for financial institutions. Quantitative researchers use statistical analysis, machine learning, and optimization techniques to build predictive models and trading algorithms. They work closely with traders, developers, and data scientists to implement and test their strategies in real-world trading environments. Quantitative researchers are skilled in mathematics, statistics, and programming. They have a deep understanding of financial markets, trading strategies, and risk management. Quantitative researchers are analytical, detail-oriented, and have a passion for solving complex problems in the financial industry.",
-});
-const ux_engineer_persona = new personaModel({
-    name: "UX Engineer",
-    description: "UX engineers are responsible for designing and developing user interfaces that are intuitive, engaging, and visually appealing. They work on web and mobile applications to create seamless user experiences that meet user needs and business goals. UX engineers conduct user research, create wireframes, and design prototypes to test and iterate on their designs. They collaborate with designers, product managers, and developers to deliver user-centered solutions that drive customer satisfaction and loyalty. UX engineers are skilled in user experience design, information architecture, and interaction design. They have a deep understanding of usability principles, accessibility standards, and design best practices. UX engineers are creative problem solvers who can translate user needs into elegant and effective design solutions.",
-});
-const data_analyst_persona = new personaModel({
-    name: "Data Analyst",
-    description: "Data analysts are responsible for collecting, analyzing, and interpreting data to help organizations make informed decisions. They work with structured and unstructured data to identify trends, patterns, and insights that can drive business strategies. Data analysts use statistical analysis, data visualization, and data mining techniques to extract valuable information from data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data analysts are skilled in data analysis, data visualization, and database management. They have a strong background in mathematics, statistics, and computer science. Data analysts are detail-oriented professionals who are passionate about working with data to uncover valuable insights and drive business success.",
-});
-const machine_learning_engineer_persona = new personaModel({
-    name: "Machine Learning Engineer",
-    description: "Machine learning engineers are responsible for developing machine learning models and algorithms to solve complex problems. They work on projects such as image recognition, natural language processing, and predictive analytics to build intelligent systems that can learn from data. Machine learning engineers use algorithms, data, and models to create machine learning applications that can make predictions and decisions. They work closely with data scientists, software engineers, and domain experts to develop machine learning solutions that meet business requirements. Machine learning engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of machine learning concepts and are passionate about building intelligent systems that can solve real-world problems.",
-});
 
 
 
@@ -63,7 +29,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -92,7 +58,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -121,7 +87,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/bf0d15fc53ffe5bad8c9fc01bbdf5ac3",
         "ceo_name": "Kevin Lyons-Tarr",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/3e3f530ceb499a4e5c2a0e65fcac210a",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -150,7 +116,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -179,7 +145,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": "Governor Jared Polis",
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -208,7 +174,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/06eb3cf17b12479594aa62ea9119efa4",
         "ceo_name": "Jensen Huang",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/27e1ae2d4916c24beeaf3726c199a564",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -237,7 +203,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/c9c07791b14f7906e48b984d0ed8faa7",
         "ceo_name": "Christian Fischer",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/1c59c58567cda540607cea89699f717d",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -266,7 +232,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f4242f28feb05584646664ef8894f50c",
         "ceo_name": "Dick Tracy, CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/988b8b5d4575b383ce652fedbb44aaf9",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -295,7 +261,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/75f7e692573fe61cf9f4043323da79b8",
         "ceo_name": "Anne Klibanski, MD",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4c9ff0c9f861fa50afbacd07f92d3bb1",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -324,7 +290,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/339c652e99e89296275936c8306d903d",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -353,7 +319,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f9952ec4489907f147d8f6167d9c5fd3",
         "ceo_name": "David Coleman",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/1a3bfede21aeb29f3339f3727e0adbc1",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -382,7 +348,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -411,7 +377,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -440,7 +406,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -469,7 +435,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -498,7 +464,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -527,7 +493,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f203deff3e816030740a558bdc5c6e42",
         "ceo_name": "Interim Chancellor Kevin Guskiewicz",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d16cecd9de62146cca4f5dbabbc6e906",
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -556,7 +522,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -585,7 +551,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -614,7 +580,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -643,7 +609,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -672,7 +638,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -701,7 +667,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -730,7 +696,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -759,7 +725,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -788,7 +754,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -817,7 +783,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "linkedin",
@@ -846,7 +812,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -875,7 +841,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -904,7 +870,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -933,7 +899,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -962,7 +928,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -991,7 +957,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -1020,7 +986,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -1049,7 +1015,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -1078,7 +1044,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": software_engineer_persona
+        "persona": "Software Engineer"
     },
     {
         "site": "indeed",
@@ -1107,7 +1073,7 @@ const jobs = [
         "banner_photo_url": "",
         "ceo_name": "Jim Fitterling",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/a1c3ac6e59690e22be71f057495588f5",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1136,7 +1102,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/06eb3cf17b12479594aa62ea9119efa4",
         "ceo_name": "Jensen Huang",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/27e1ae2d4916c24beeaf3726c199a564",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1165,7 +1131,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": "Ben Page",
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1194,7 +1160,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1223,7 +1189,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1252,7 +1218,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1281,7 +1247,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1310,7 +1276,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1339,7 +1305,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1368,7 +1334,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/e219c883fd16c60154364d43b9c497c1",
         "ceo_name": "Aiman Ezzat",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/3ea22fd272586e04be0a256d26409e76",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1397,7 +1363,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/8ab97f4884685285ea6b4a837d8d3231",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1426,7 +1392,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/988d4d3d5db95ef38aaabb7b84f18b83",
         "ceo_name": "Ronald O'Hanley",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d6d51cd9596c4540e6c61f9ce49a54bb",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1455,7 +1421,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/04b3ba3032b13af94cc1cd71b7729b86",
         "ceo_name": "Matt Hicks",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/7738f8909625388d03efb72b068f4799",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1484,7 +1450,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/579f641a9ef8e0c4d3db62c1d3f73aac",
         "ceo_name": "Horacio D. Rozanski",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/90cc04bceed894c492ffdc6be770c0c0",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1513,7 +1479,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4cbeca5ba043faf58e68801db8a07cee",
         "ceo_name": "Christopher D. Kastner, President and CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/aa87f73937f718c385ddbea4f3c44f2a",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1542,7 +1508,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4cbeca5ba043faf58e68801db8a07cee",
         "ceo_name": "Christopher D. Kastner, President and CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/aa87f73937f718c385ddbea4f3c44f2a",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1571,7 +1537,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a8be72ec1f6d612ffec4f7e1752d43c3",
         "ceo_name": "Marvin Ellison",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/7dbc926f61ef3f40647ebf75340a166e",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1600,7 +1566,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4cbeca5ba043faf58e68801db8a07cee",
         "ceo_name": "Christopher D. Kastner, President and CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/aa87f73937f718c385ddbea4f3c44f2a",
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1629,7 +1595,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -1658,7 +1624,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1687,7 +1653,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1716,7 +1682,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1745,7 +1711,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1774,7 +1740,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1803,7 +1769,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1832,7 +1798,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1861,7 +1827,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1890,7 +1856,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1919,7 +1885,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1948,7 +1914,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -1977,13 +1943,13 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
         "job_url": "https:\/\/www.linkedin.com\/jobs\/view\/3964563036",
         "job_url_direct": null,
-        "title": machine_learning_engineer_persona,
+        "title": "Machine Learning Engineer",
         "company": "Stuut",
         "location": "New York, NY",
         "job_type": "fulltime",
@@ -2006,7 +1972,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "linkedin",
@@ -2035,7 +2001,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2064,7 +2030,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2093,7 +2059,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2122,7 +2088,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2151,7 +2117,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2180,7 +2146,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2209,7 +2175,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -2238,7 +2204,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ai_engineer_persona
+        "persona": "AI Engineer"
     },
     {
         "site": "indeed",
@@ -2267,7 +2233,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/75f7e692573fe61cf9f4043323da79b8",
         "ceo_name": "Anne Klibanski, MD",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4c9ff0c9f861fa50afbacd07f92d3bb1",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2296,7 +2262,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/05708078454313fc8a4517347975bbea",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2325,13 +2291,13 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/b52d605b520d4ea8c18d6d3c73649a6a",
         "ceo_name": "Mike Slubowski",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/237e3cae2b8cb1e934efed7936c09aeb",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
         "job_url": "https:\/\/www.indeed.com\/viewjob?jk=3e10ceb2f3d7d164",
         "job_url_direct": "https:\/\/recruiting.ultipro.com\/PAR1025PNATB\/JobBoard\/78198a68-8e94-4f76-b970-3a27214b2ee3\/OpportunityDetail?opportunityId=831c5c21-5693-4b67-aa59-7558a8ba9ccd&postingId=0323b1ad-2da4-48b3-92b0-861115ef4abc",
-        "title": data_scientist_persona,
+        "title": "Data Scientist",
         "company": "Park National Bank",
         "location": "Newark, OH, US",
         "job_type": "fulltime",
@@ -2354,7 +2320,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/13118a4da14c1b9f99903d69aed28293",
         "ceo_name": "David Trautman",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/fe69a87a591e6dad57b1ad1bae746a76",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2383,7 +2349,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/660201e63d266e0b243dcf636869fc8f",
         "ceo_name": "Stu Shea",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4aef75b353c099e069750f0121713979",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2412,7 +2378,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/50847e33406d65c6bd6ba23c02b75a49",
         "ceo_name": "William H. Rogers, Jr.",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/19a5691c3e7b620f4787cf2c8683b19e",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2441,7 +2407,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/988d4d3d5db95ef38aaabb7b84f18b83",
         "ceo_name": "Ronald O'Hanley",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d6d51cd9596c4540e6c61f9ce49a54bb",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2470,7 +2436,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/5d5c3ebcb4a6b5794dcd34b640099935",
         "ceo_name": "Brian Cornell",
         "ceo_photo_url": "",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2499,7 +2465,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/5d5c3ebcb4a6b5794dcd34b640099935",
         "ceo_name": "Brian Cornell",
         "ceo_photo_url": "",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2528,7 +2494,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/1591ad74810ec4cf0f656c154949a925",
         "ceo_name": "Pradeep K. Khosla",
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2557,7 +2523,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/729655ca81c97cea7e465010d2b4fc61",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2586,7 +2552,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": "Safa R. Zaki",
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2615,7 +2581,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f096ca515ee17c87e52edbf337cc4dde",
         "ceo_name": "Richard A. Gonzalez",
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2644,7 +2610,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2673,7 +2639,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2702,7 +2668,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/8c20beb7a07df347f86ef3a7ed3eec7b",
         "ceo_name": "Dietrich Kuhlmann",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/5b6d74e72a47739868351d746d01d816",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2731,7 +2697,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/540cf9dbc8fc7450b9d757b4b24d7f63",
         "ceo_name": "Thomas Wiedemann",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/602a1c828e7a9bd6e8fae0abcdf85182",
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2760,7 +2726,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -2789,7 +2755,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/cb2aeea1205aad5dad43f3b292daf503",
         "ceo_name": "Brad Jackson",
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2818,7 +2784,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2847,13 +2813,13 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
         "job_url": "https:\/\/www.linkedin.com\/jobs\/view\/3984182562",
         "job_url_direct": null,
-        "title": data_scientist_persona,
+        "title": "Data Scientist",
         "company": "PETADATA",
         "location": "Santa Clarita, CA",
         "job_type": "fulltime",
@@ -2876,7 +2842,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2905,7 +2871,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2934,7 +2900,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2963,7 +2929,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -2992,7 +2958,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -3021,7 +2987,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -3050,7 +3016,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "linkedin",
@@ -3079,7 +3045,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "zip_recruiter",
@@ -3108,7 +3074,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "zip_recruiter",
@@ -3137,7 +3103,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_scientist_persona
+        "persona": "Data Scientist"
     },
     {
         "site": "indeed",
@@ -3166,7 +3132,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/04ded7d05f5a9ebe08c7cd8d6b967f3e",
         "ceo_name": "Martin Flanagan",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/6eb1c1b1703c905097133a68a21b8143",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3195,7 +3161,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/723ec6f16657890a1d2c4851f55a4ef5",
         "ceo_name": "Henry Shapiro",
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3224,7 +3190,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/56b1f27b69e0e2c02b8e9ad6e5fce05f",
         "ceo_name": "Sundar Pichai",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/417a5815642490eb9a47ed7970a26c97",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3253,7 +3219,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/56b1f27b69e0e2c02b8e9ad6e5fce05f",
         "ceo_name": "Sundar Pichai",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/417a5815642490eb9a47ed7970a26c97",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3282,7 +3248,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/3e40d6a4601cb91556d4ee643d10d532",
         "ceo_name": "Walt Bettinger",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/76f23a4f02f90f99c4174dbad9774682",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3311,7 +3277,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3340,7 +3306,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/0bed25216f327db85ab6b7f52d5407f5",
         "ceo_name": "Sergio P. Ermotti",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/ec4938d4e960f85ad7c0751a5b01cfe6",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3369,7 +3335,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a1604a677b0070f445f373a159fed84b",
         "ceo_name": "Peng Zhao",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/debca8cd495d3067f3089d126c47d1f5",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3398,7 +3364,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/2931bf886c2ef4ec2399fb0f642a2654",
         "ceo_name": "",
         "ceo_photo_url": "",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3427,7 +3393,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3456,7 +3422,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/723ec6f16657890a1d2c4851f55a4ef5",
         "ceo_name": "Henry Shapiro",
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3485,7 +3451,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/7a754f6652a126427b814532a5033fcf",
         "ceo_name": "Jeff Yass",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/336bec283ddaf63f4f3265408863bed9",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3514,7 +3480,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/7a754f6652a126427b814532a5033fcf",
         "ceo_name": "Jeff Yass",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/336bec283ddaf63f4f3265408863bed9",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3543,7 +3509,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/56b1f27b69e0e2c02b8e9ad6e5fce05f",
         "ceo_name": "Sundar Pichai",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/417a5815642490eb9a47ed7970a26c97",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3572,7 +3538,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/7114106e35b64e82743a0005e4d045b0",
         "ceo_name": "Kenneth C. Griffin",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/8854956f4cbf51c2ee3b42c18002a877",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3601,7 +3567,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3630,7 +3596,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a1604a677b0070f445f373a159fed84b",
         "ceo_name": "Peng Zhao",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/debca8cd495d3067f3089d126c47d1f5",
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3659,7 +3625,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -3688,7 +3654,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3717,7 +3683,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3746,7 +3712,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3775,7 +3741,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3804,7 +3770,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3833,7 +3799,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3862,7 +3828,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3891,7 +3857,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3920,7 +3886,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3949,7 +3915,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -3978,7 +3944,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4007,7 +3973,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4036,7 +4002,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4065,7 +4031,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4094,7 +4060,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4123,7 +4089,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4152,7 +4118,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4181,7 +4147,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4210,7 +4176,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "linkedin",
@@ -4239,7 +4205,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": quant_researcher_persona
+        "persona": "Quant Researcher"
     },
     {
         "site": "indeed",
@@ -4268,7 +4234,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": "Ben Page",
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4297,7 +4263,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/660201e63d266e0b243dcf636869fc8f",
         "ceo_name": "Stu Shea",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4aef75b353c099e069750f0121713979",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4326,7 +4292,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/988d4d3d5db95ef38aaabb7b84f18b83",
         "ceo_name": "Ronald O'Hanley",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d6d51cd9596c4540e6c61f9ce49a54bb",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4355,7 +4321,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/96785b9823e49a5385cb62672109fcef",
         "ceo_name": "Charlie Scharf, CEO and President",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/37bca88e561f55969a6a51885eca1f9a",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4384,7 +4350,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/2f10f12d8e2b8e4ecec4be904347c394",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4413,7 +4379,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4442,7 +4408,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4471,7 +4437,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/486d80eeb2748a83a5570b48e7491a05",
         "ceo_name": "Boomer Muth",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/777408744126ffca516dbea68e874c35",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4500,7 +4466,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/96785b9823e49a5385cb62672109fcef",
         "ceo_name": "Charlie Scharf, CEO and President",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/37bca88e561f55969a6a51885eca1f9a",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4529,7 +4495,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/9ca6fa49c186798bf2780079b72ec1cb",
         "ceo_name": "Clint Sharp",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/79464f01f0dffea777ec60c5e0388d5e",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4558,7 +4524,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/3e18ac1b8f01ab69489e1768e32e67a3",
         "ceo_name": "Ramon Laguarta",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/22714a23c6ab698430d9c1e3e6ac1060",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4587,7 +4553,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f28c01bf96f9feb22e1392c748c65ada",
         "ceo_name": "Keith R. Dunleavy",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/ac2cce0293ff79743467f2e9039a4104",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4616,7 +4582,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4645,7 +4611,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4674,7 +4640,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/0066d9d925739913bf970ad450471aec",
         "ceo_name": "Stefan Widing",
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4703,7 +4669,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4714fe24419b1a95b6e3672a89ab0a6a",
         "ceo_name": "Stephen J Squeri",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/603e6a3bd11dbd797844ea478f2a6ca9",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4732,7 +4698,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/ff3e6de48f7941c7ea8babbf948a4998",
         "ceo_name": "Andrew Jassy",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/59f4d630d9c6b99af50a3381e6406486",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4761,7 +4727,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/ff3e6de48f7941c7ea8babbf948a4998",
         "ceo_name": "Andrew Jassy",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/59f4d630d9c6b99af50a3381e6406486",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4790,7 +4756,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/ff3e6de48f7941c7ea8babbf948a4998",
         "ceo_name": "Andrew Jassy",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/59f4d630d9c6b99af50a3381e6406486",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -4819,7 +4785,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a13613ffd360600e079e0c8041c75c0d",
         "ceo_name": "James C. Foster",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/427b8941ef66e8f438a34e276ab0cf21",
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4848,7 +4814,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4877,7 +4843,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4906,7 +4872,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4935,7 +4901,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4964,7 +4930,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -4993,7 +4959,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5022,7 +4988,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5051,7 +5017,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5080,7 +5046,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5109,7 +5075,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5138,7 +5104,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5167,7 +5133,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "linkedin",
@@ -5196,7 +5162,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -5225,7 +5191,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -5254,7 +5220,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -5283,7 +5249,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -5312,7 +5278,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": ux_engineer_persona
+        "persona": "UX Engineer"
     },
     {
         "site": "indeed",
@@ -5341,7 +5307,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5370,7 +5336,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/0e700ec431c873f2a12b733b3e621cf9",
         "ceo_name": "Kenneth A. Vecchione",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/e568229ddc8a2f178d6132d87bc0ff91",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5399,7 +5365,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4c12478258f7ff60c22c4fe9d29195d4",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5428,7 +5394,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4ce9ffb2601ae8a44a4d58b464151760",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5457,7 +5423,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5486,7 +5452,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/7570994436f91b3637ecd16a22d8fa7c",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5515,7 +5481,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5544,7 +5510,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/96785b9823e49a5385cb62672109fcef",
         "ceo_name": "Charlie Scharf, CEO and President",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/37bca88e561f55969a6a51885eca1f9a",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5573,7 +5539,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f44a1bcae8bb48fe0cc7ec5e05e92a6c",
         "ceo_name": "Brian T. Moynihan",
         "ceo_photo_url": "",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5602,7 +5568,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5631,7 +5597,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5660,7 +5626,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/e4359ee281fb1525840ba9b4f5dd5403",
         "ceo_name": "Raj Verma",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/0a8b9699c9c414fce61412bb3933a6d6",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5689,7 +5655,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/03eb087b969076d9b1bfaa2777e5cce2",
         "ceo_name": "Bill Ready",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/32a94c7612de1138798aa7ffb5aa0e21",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5718,7 +5684,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/583b4a482c885e0dc03c78b6a04625d5",
         "ceo_name": "John Hewko",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/56a8f1b7bb22b7cebc1a8b4b87d573f9",
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5747,7 +5713,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -5776,7 +5742,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a357f097500593f264ef406ad6665d8e",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5805,7 +5771,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5834,7 +5800,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5863,7 +5829,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5892,7 +5858,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5921,7 +5887,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5950,7 +5916,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "linkedin",
@@ -5979,7 +5945,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6008,7 +5974,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6037,7 +6003,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6066,7 +6032,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6095,7 +6061,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6124,7 +6090,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "zip_recruiter",
@@ -6153,7 +6119,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": product_manager_persona
+        "persona": "Product Manager"
     },
     {
         "site": "indeed",
@@ -6182,7 +6148,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/0e2955e1a0461a23bb0f355896d2876c",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6211,7 +6177,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6240,7 +6206,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4b429f0e0ef627f91764da45076bae43",
         "ceo_name": "Scott Kirby",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/b42733781f2df64616110498502b434c",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6269,7 +6235,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4b429f0e0ef627f91764da45076bae43",
         "ceo_name": "Scott Kirby",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/b42733781f2df64616110498502b434c",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6298,7 +6264,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/75f7e692573fe61cf9f4043323da79b8",
         "ceo_name": "Anne Klibanski, MD",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4c9ff0c9f861fa50afbacd07f92d3bb1",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6327,7 +6293,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/75f7e692573fe61cf9f4043323da79b8",
         "ceo_name": "Anne Klibanski, MD",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/4c9ff0c9f861fa50afbacd07f92d3bb1",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6356,7 +6322,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/d144e3a7f3ca00b993fd66cc05868b02",
         "ceo_name": "Thasunda Brown Duckett",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/0c118ef3115164a9efc2e106d41a4d56",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6385,7 +6351,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a48fd8723e1cfc4faa771a062ac8ffd6",
         "ceo_name": "Amy Gilliland",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d201622a7f352d6c127ebba52d11fa2d",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6414,7 +6380,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/b52d605b520d4ea8c18d6d3c73649a6a",
         "ceo_name": "Mike Slubowski",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/237e3cae2b8cb1e934efed7936c09aeb",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6443,7 +6409,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/97714d4d37acf9a02dfcbda15e6108b1",
         "ceo_name": "John Heller",
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6472,7 +6438,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6501,7 +6467,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6530,7 +6496,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6559,7 +6525,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/df0dc4c27b3c49c11feb020a680232b3",
         "ceo_name": "J. Alexander (Sandy) Miller Douglas",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/5e51e97c57cc89c5b84cd2917e6a7c0e",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6588,7 +6554,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6617,7 +6583,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6646,7 +6612,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/ca0d5dcf48d39dddcf2e398e043759ac",
         "ceo_name": "Eric Smidt ",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/ce1b4b660805576f1d167be40fb6c5fd",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6675,7 +6641,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/579f641a9ef8e0c4d3db62c1d3f73aac",
         "ceo_name": "Horacio D. Rozanski",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/90cc04bceed894c492ffdc6be770c0c0",
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6704,7 +6670,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/091c0a260095945a35f8ffd786379c92",
         "ceo_name": "Janet Trafton Mills",
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -6733,13 +6699,13 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": "Elayne Hayes Anthony",
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
         "job_url": "https:\/\/www.linkedin.com\/jobs\/view\/3982794361",
         "job_url_direct": null,
-        "title": data_analyst_persona,
+        "title": 'Data Analyst',
         "company": "Hopper",
         "location": "",
         "job_type": "fulltime",
@@ -6762,7 +6728,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6791,7 +6757,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6820,7 +6786,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6849,7 +6815,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6878,7 +6844,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6907,7 +6873,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6936,7 +6902,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6965,7 +6931,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -6994,7 +6960,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -7023,7 +6989,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -7052,7 +7018,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "linkedin",
@@ -7081,7 +7047,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7110,7 +7076,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7139,7 +7105,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7168,7 +7134,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7197,7 +7163,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7226,7 +7192,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7255,7 +7221,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "zip_recruiter",
@@ -7284,7 +7250,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": data_analyst_persona
+        "persona": 'Data Analyst'
     },
     {
         "site": "indeed",
@@ -7313,7 +7279,7 @@ const jobs = [
         "banner_photo_url": "",
         "ceo_name": "Jim Fitterling",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/a1c3ac6e59690e22be71f057495588f5",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7342,7 +7308,7 @@ const jobs = [
         "banner_photo_url": "",
         "ceo_name": "Jim Fitterling",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/a1c3ac6e59690e22be71f057495588f5",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7371,7 +7337,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/06eb3cf17b12479594aa62ea9119efa4",
         "ceo_name": "Jensen Huang",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/27e1ae2d4916c24beeaf3726c199a564",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7400,7 +7366,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7429,7 +7395,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/05708078454313fc8a4517347975bbea",
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7458,7 +7424,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/988d4d3d5db95ef38aaabb7b84f18b83",
         "ceo_name": "Ronald O'Hanley",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/d6d51cd9596c4540e6c61f9ce49a54bb",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7487,7 +7453,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/5d5c3ebcb4a6b5794dcd34b640099935",
         "ceo_name": "Brian Cornell",
         "ceo_photo_url": "",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7516,7 +7482,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/5d5c3ebcb4a6b5794dcd34b640099935",
         "ceo_name": "Brian Cornell",
         "ceo_photo_url": "",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7545,7 +7511,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4cbeca5ba043faf58e68801db8a07cee",
         "ceo_name": "Christopher D. Kastner, President and CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/aa87f73937f718c385ddbea4f3c44f2a",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7574,7 +7540,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/a8be72ec1f6d612ffec4f7e1752d43c3",
         "ceo_name": "Marvin Ellison",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/7dbc926f61ef3f40647ebf75340a166e",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7603,7 +7569,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/1fbda91d27e16a8e4d49c1de0133d29a",
         "ceo_name": "Scott Strazik",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/9fc066c796c8cd26aed44c34a2fa723b",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7632,7 +7598,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7661,7 +7627,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7690,7 +7656,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7719,7 +7685,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/4cbeca5ba043faf58e68801db8a07cee",
         "ceo_name": "Christopher D. Kastner, President and CEO",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/aa87f73937f718c385ddbea4f3c44f2a",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7748,7 +7714,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7777,7 +7743,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7806,7 +7772,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/f5e06d0f81dbbf4cf92db993f919a0d7",
         "ceo_name": "David Sewell",
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7835,7 +7801,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/73ae2f14f9794500ea8e2ce60068698c",
         "ceo_name": "Anne Wojcicki",
         "ceo_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_ceophoto\/512x512\/8c14db9258cd19df0bbb901292e753b7",
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "indeed",
@@ -7864,7 +7830,7 @@ const jobs = [
         "banner_photo_url": "https:\/\/d2q79iu7y748jz.cloudfront.net\/s\/_headerimage\/1960x400\/cb2aeea1205aad5dad43f3b292daf503",
         "ceo_name": "Brad Jackson",
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -7893,13 +7859,13 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
         "job_url": "https:\/\/www.linkedin.com\/jobs\/view\/3986630347",
         "job_url_direct": null,
-        "title": machine_learning_engineer_persona,
+        "title": "Machine Learning Engineer",
         "company": "Ascendion",
         "location": "Irving, TX",
         "job_type": "fulltime",
@@ -7922,7 +7888,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -7951,7 +7917,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -7980,7 +7946,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -8009,7 +7975,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -8038,7 +8004,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -8067,7 +8033,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "linkedin",
@@ -8096,7 +8062,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8125,7 +8091,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8154,7 +8120,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8183,7 +8149,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8212,7 +8178,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8241,7 +8207,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8270,7 +8236,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8299,7 +8265,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     },
     {
         "site": "zip_recruiter",
@@ -8328,7 +8294,7 @@ const jobs = [
         "banner_photo_url": null,
         "ceo_name": null,
         "ceo_photo_url": null,
-        "persona": machine_learning_engineer_persona
+        "persona": "Machine Learning Engineer"
     }
 ]
 

@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
 
-import { createPersonaRoute, deletePersonaRoute, editPersonaRoute, getPersonaRoute } from "../../services/personas";
+import { createPersonaRoute, deletePersonaRoute, editPersonaRoute, getPersonaRoute, getPersonasRoute } from "../../services/persona";
 
 const router = express.Router();
 
@@ -23,6 +23,11 @@ router.patch('/:id', passport.authenticate('jwt', { session: false }), async (re
 // delete persona
 router.delete('/:id', passport.authenticate('jwt', { session: false }), async (req, res) => {
     await deletePersonaRoute(req, res);
+});
+
+// get all personas
+router.get('/', passport.authenticate('jwt', { session: false }), async (req, res) => {
+    await getPersonasRoute(req, res);
 });
 
 export default router;

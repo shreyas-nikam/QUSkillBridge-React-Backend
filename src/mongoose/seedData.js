@@ -101,6 +101,11 @@ async function seedDB() {
   const perm19 = await permissionModel({ created_at: new Date(), name: "create items" });
   const perm20 = await permissionModel({ created_at: new Date(), name: "edit items" });
   const perm21 = await permissionModel({ created_at: new Date(), name: "delete items" });
+  // persona permissions
+  const perm22 = await permissionModel({ created_at: new Date(), name: "view personas" });
+  const perm23 = await permissionModel({ created_at: new Date(), name: "create personas" });
+  const perm24 = await permissionModel({ created_at: new Date(), name: "edit personas" });
+  const perm25 = await permissionModel({ created_at: new Date(), name: "delete personas" });
   await permissionModel.insertMany([
     perm1,
     perm2,
@@ -123,18 +128,22 @@ async function seedDB() {
     perm19,
     perm20,
     perm21,
+    perm22,
+    perm23,
+    perm24,
+    perm25,
   ]);
 
   const roleAdmin = new roleModel({
     _id: mongoose.Types.ObjectId(1), name: "admin", created_at: new Date(), users: [admin], permissions: [perm1._id, perm2._id, perm3._id, perm4._id, perm5._id, perm6._id, perm7._id, perm8._id,
-    perm9._id, perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id]
+    perm9._id, perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id, perm22._id, perm23._id, perm24._id, perm25._id]
   });
   await roleAdmin.save();
   admin.role = roleAdmin._id;
   quadmin.role = roleAdmin._id;
   await admin.save();
   await quadmin.save();
-  const roleCreator = new roleModel({ _id: mongoose.Types.ObjectId(2), name: "creator", created_at: new Date(), users: [creator], permissions: [perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id] });
+  const roleCreator = new roleModel({ _id: mongoose.Types.ObjectId(2), name: "creator", created_at: new Date(), users: [creator], permissions: [perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id, perm22._id, , perm23._id, perm24._id, perm25._id] });
   await roleCreator.save();
   creator.role = roleCreator._id;
   qucreator.role = roleCreator._id;
@@ -240,10 +249,54 @@ async function seedDB() {
   item3.tags.push(tag3);
   await itemModel.insertMany([item1, item2, item3]);
 
-  
 
+  // add personas
+  const software_engineer_persona = new personaModel({
+    name: "Software Engineer",
+    description: "Software engineers are responsible for developing, testing, deploying, and maintaining software applications. They work closely with product managers, designers, and other engineers to create high-quality software products. Software engineers use programming languages, frameworks, and tools to build scalable and reliable software solutions. They are skilled problem solvers who can analyze complex technical challenges and design effective solutions. Software engineers are detail-oriented and have a passion for writing clean, efficient code. They are constantly learning and adapting to new technologies to stay current in the fast-paced software development industry.",
+  });
+  const ai_engineer_persona = new personaModel({
+    name: "AI Engineer",
+    description: "AI engineers are responsible for developing artificial intelligence (AI) and machine learning (ML) solutions. They work on cutting-edge technologies to build intelligent systems that can learn, reason, and make decisions. AI engineers use algorithms, data, and models to create AI applications that can perform tasks such as image recognition, natural language processing, and predictive analytics. They work closely with data scientists, software engineers, and domain experts to develop AI solutions that meet business requirements. AI engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of AI concepts and are passionate about building intelligent systems that can solve complex problems.",
+  });
+  const data_scientist_persona = new personaModel({
+    name: "Data Scientist",
+    description: "Data scientists are responsible for analyzing large datasets to extract valuable insights and make data-driven decisions. They work with structured and unstructured data to identify trends, patterns, and correlations that can inform business strategies. Data scientists use statistical analysis, machine learning, and data visualization techniques to uncover hidden patterns in data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data scientists are skilled in programming, data analysis, and machine learning. They have a strong background in mathematics, statistics, and computer science. Data scientists are curious, analytical, and detail-oriented professionals who are passionate about working with data to drive business success.",
+  });
+  const product_manager_persona = new personaModel({
+    name: "Product Manager",
+    description: "Product managers are responsible for defining the vision, strategy, and roadmap for a product or service. They work closely with cross-functional teams to develop and launch products that meet customer needs and business goals. Product managers conduct market research, gather customer feedback, and define product requirements to guide the development process. They collaborate with designers, engineers, and other stakeholders to deliver high-quality products on time and within budget. Product managers are skilled communicators who can articulate a clear product vision and motivate teams to achieve their goals. They have a deep understanding of user needs, market trends, and competitive landscape. Product managers are strategic thinkers who can prioritize initiatives and make data-driven decisions to drive product success.",
+  });
+  const quant_researcher_persona = new personaModel({
+    name: "Quantitative Researcher",
+    description: "Quantitative researchers are responsible for developing mathematical models and algorithms to analyze financial markets and make trading decisions. They work in quantitative finance, algorithmic trading, and risk management to develop quantitative strategies that generate profits for financial institutions. Quantitative researchers use statistical analysis, machine learning, and optimization techniques to build predictive models and trading algorithms. They work closely with traders, developers, and data scientists to implement and test their strategies in real-world trading environments. Quantitative researchers are skilled in mathematics, statistics, and programming. They have a deep understanding of financial markets, trading strategies, and risk management. Quantitative researchers are analytical, detail-oriented, and have a passion for solving complex problems in the financial industry.",
+  });
+  const ux_engineer_persona = new personaModel({
+    name: "UX Engineer",
+    description: "UX engineers are responsible for designing and developing user interfaces that are intuitive, engaging, and visually appealing. They work on web and mobile applications to create seamless user experiences that meet user needs and business goals. UX engineers conduct user research, create wireframes, and design prototypes to test and iterate on their designs. They collaborate with designers, product managers, and developers to deliver user-centered solutions that drive customer satisfaction and loyalty. UX engineers are skilled in user experience design, information architecture, and interaction design. They have a deep understanding of usability principles, accessibility standards, and design best practices. UX engineers are creative problem solvers who can translate user needs into elegant and effective design solutions.",
+  });
+  const data_analyst_persona = new personaModel({
+    name: "Data Analyst",
+    description: "Data analysts are responsible for collecting, analyzing, and interpreting data to help organizations make informed decisions. They work with structured and unstructured data to identify trends, patterns, and insights that can drive business strategies. Data analysts use statistical analysis, data visualization, and data mining techniques to extract valuable information from data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data analysts are skilled in data analysis, data visualization, and database management. They have a strong background in mathematics, statistics, and computer science. Data analysts are detail-oriented professionals who are passionate about working with data to uncover valuable insights and drive business success.",
+  });
+  const machine_learning_engineer_persona = new personaModel({
+    name: "Machine Learning Engineer",
+    description: "Machine learning engineers are responsible for developing machine learning models and algorithms to solve complex problems. They work on projects such as image recognition, natural language processing, and predictive analytics to build intelligent systems that can learn from data. Machine learning engineers use algorithms, data, and models to create machine learning applications that can make predictions and decisions. They work closely with data scientists, software engineers, and domain experts to develop machine learning solutions that meet business requirements. Machine learning engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of machine learning concepts and are passionate about building intelligent systems that can solve real-world problems.",
+  });
+
+  await personaModel.insertMany([
+    software_engineer_persona,
+    ai_engineer_persona,
+    data_scientist_persona,
+    product_manager_persona,
+    quant_researcher_persona,
+    ux_engineer_persona,
+    data_analyst_persona,
+    machine_learning_engineer_persona,
+  ]);
 
   // add courses
+  let courses_list = []
   for (let index = 0; index < courses.length; index++) {
     const course = courses[index];
     let newCourse = new courseModel({});
@@ -253,10 +306,24 @@ async function seedDB() {
         newCourse[key] = course[key];
       }
     }
-    await newCourse.save();
+    courses_list.push(newCourse);
+  }
+  await courseModel.insertMany(courses_list);
+
+  const persona_name_object_mapping = {
+    "Software Engineer": software_engineer_persona,
+    "AI Engineer": ai_engineer_persona,
+    "Data Scientist": data_scientist_persona,
+    "Product Manager": product_manager_persona,
+    "Quantitative Researcher": quant_researcher_persona,
+    "UX Engineer": ux_engineer_persona,
+    "Data Analyst": data_analyst_persona,
+    "Machine Learning Engineer": machine_learning_engineer_persona,
   }
 
+
   // add jobs for each persona
+  let jobs_list = [];
   for (let index = 0; index < jobs.length; index++) {
     const job = jobs[index];
     let newJob = new jobModel({});
@@ -264,10 +331,15 @@ async function seedDB() {
     for (const key in job) {
       if (Object.hasOwnProperty.call(job, key)) {
         newJob[key] = job[key];
+        if (key === "persona") {
+          newJob[key] = persona_name_object_mapping[job[key]];
+        }
       }
     }
-    await newJob.save();
+    jobs_list.push(newJob);
   }
+
+  await jobModel.insertMany(jobs_list);
 
   console.log("DB seeded");
 }

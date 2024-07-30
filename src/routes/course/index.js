@@ -1,8 +1,8 @@
 import express from "express";
 import passport from "passport";
 
-import { createCourseRoute, deleteCourseRoute, editCourseRoute, getCoursesRoute, getCourseRoute } from "../../services/courses";
-router = express.Router();
+import { createCourseRoute, deleteCourseRoute, editCourseRoute, getCoursesRoute, getCourseRoute } from "../../services/course";
+const router = express.Router();
 
 // get all courses
 router.get('/', passport.authenticate('jwt', { session: false }), async (req, res) => {
@@ -30,3 +30,4 @@ router.delete('/:id', passport.authenticate('jwt', { session: false }), async (r
 });
 
 
+export default router;

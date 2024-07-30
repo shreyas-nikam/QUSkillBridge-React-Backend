@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
 
-import { createJobRoute, deleteJobRoute, editJobRoute, getJobRoute, getJobsRoute, getJobsByPersonaRoute } from "../../services/jobs";
+import { createJobRoute, deleteJobRoute, editJobRoute, getJobRoute, getJobsRoute, getJobsByPersonaRoute } from "../../services/job";
 
 const router = express.Router();
 
