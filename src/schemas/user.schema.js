@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   profile_image: { type: String },
   linkedin_profile_id: { type: String },
   summary: { type: String },
-  headling: { type: String },
+  headline: { type: String },
   skills: { type: [String] },
   preferred_jobs: { type: [String] },
   preferred_locations: { type: [String] },

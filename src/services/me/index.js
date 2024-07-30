@@ -89,11 +89,11 @@ export const patchProfileRouteHandler = async (req, res) => {
           ],
         },
       });
-    } else if ( newPassword && newPassword > 7 && newPassword == confirmPassword ) {
+    } else if (newPassword && newPassword > 7 && newPassword == confirmPassword) {
       const salt = await bcrypt.genSalt(10);
       const hashPassword = await bcrypt.hash(newPassword, salt);
       try {
-        const response = await userModel.updateOne( { email: foundUser.email }, { $set :{ "name": name, "email": email, "password": hashPassword } });
+        const response = await userModel.updateOne({ email: foundUser.email }, { $set: { "name": name, "email": email, "password": hashPassword } });
       } catch (err) {
         console.error(err);
       }
@@ -111,7 +111,7 @@ export const patchProfileRouteHandler = async (req, res) => {
       res.send(sentData);
     } else if (!newPassword) {
       try {
-        await userModel.updateOne( { email: foundUser.email }, { $set :{ "name": name, "email": email } });
+        await userModel.updateOne({ email: foundUser.email }, { $set: { "name": name, "email": email } });
       } catch (err) {
         console.error(err);
       }

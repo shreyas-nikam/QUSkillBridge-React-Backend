@@ -43,6 +43,7 @@ export const getUsersRoute = async (req, res) => {
     filters = req.query.filter;
   }
 
+
   //sorting
   let sortValue;
   if (req.query.sort) {
@@ -241,7 +242,7 @@ export const getUserRoute = async (req, res) => {
 };
 
 export const createUserRoute = async (req, res) => {
-  const { name, email, profile_image, password, password_confirmation } =
+  const { name, email, profile_image, password, password_confirmation, linkedin_profile_id } =
     req.body.data.attributes;
   const roleId = req.body.data.relationships.roles.data[0].id;
   if (!name) {
@@ -269,12 +270,24 @@ export const createUserRoute = async (req, res) => {
       .status(400)
       .json({ errors: [{ detail: "The email is not valid" }] });
   }
+  if (!linkedin_profile_id) {
+    return res
+      .status(400)
+      .json({ errors: [{ detail: "The linkedin profile id is required" }] });
+  }
 
   let foundUser = await userModel.findOne({ email: email });
   if (foundUser) {
     return res
       .status(400)
       .json({ message: "The email has already been taken" });
+  }
+
+  let repeatLinkedinProfileId = await userModel.findOne({ linkedin_profile_id: linkedin_profile_id });
+  if (repeatLinkedinProfileId) {
+    return res
+      .status(400)
+      .json({ message: "The linkedin profile id has already been taken" });
   }
 
   // check password to exist and be at least 8 characters long
@@ -299,6 +312,7 @@ export const createUserRoute = async (req, res) => {
     email: email,
     password: hashPassword,
     profile_image: `${process.env.APP_URL_API}${profile_image}`,
+    linkedin_profile_id: linkedin_profile_id,
     created_at: Date.now(),
     updated_at: Date.now(),
     role: roleId,
@@ -333,7 +347,7 @@ export const createUserRoute = async (req, res) => {
 export const editUserRoute = async (req, res) => {
   const foundUser = await userModel.findById(req.params.id);
 
-  const { name, email, profile_image } = req.body.data.attributes;
+  const { name, email, profile_image, linkedin_profile_id, summary, headline, skills, preferred_jobs, preferred_locations, education, experience, location_name, created_at, role, resume_location, jobs_visited, available_courses, persona } = req.body.data.attributes;
   let roleId;
   let oldRole = await roleModel.findOne({ _id: foundUser.role });
   if (req.body.data.relationships) {
@@ -355,7 +369,14 @@ export const editUserRoute = async (req, res) => {
 
   const updatedUser = await userModel.updateOne(
     { _id: foundUser._id },
-    { name: name, email: email, profile_image: profile_image, role: roleId }
+    {
+      name: name, email: email, profile_image: profile_image, role: roleId,
+      linkedin_profile_id: linkedin_profile_id, summary: summary, headline: headline,
+      skills: skills, preferred_jobs: preferred_jobs, preferred_locations: preferred_locations,
+      education: education, experience: experience, location_name: location_name,
+      role: role, resume_location: resume_location, jobs_visited: jobs_visited,
+      available_courses: available_courses,
+    }
   );
 
   if (oldRole._id != roleId) {

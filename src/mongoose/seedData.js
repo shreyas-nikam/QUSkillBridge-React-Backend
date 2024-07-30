@@ -21,9 +21,62 @@ async function seedDB() {
   //connect do db
   dbConnect();
 
+
+
+  // add personas
+  const software_engineer_persona = new personaModel({
+    name: "Software Engineer",
+    description: "Software engineers are responsible for developing, testing, deploying, and maintaining software applications. They work closely with product managers, designers, and other engineers to create high-quality software products. Software engineers use programming languages, frameworks, and tools to build scalable and reliable software solutions. They are skilled problem solvers who can analyze complex technical challenges and design effective solutions. Software engineers are detail-oriented and have a passion for writing clean, efficient code. They are constantly learning and adapting to new technologies to stay current in the fast-paced software development industry.",
+  });
+  const ai_engineer_persona = new personaModel({
+    name: "AI Engineer",
+    description: "AI engineers are responsible for developing artificial intelligence (AI) and machine learning (ML) solutions. They work on cutting-edge technologies to build intelligent systems that can learn, reason, and make decisions. AI engineers use algorithms, data, and models to create AI applications that can perform tasks such as image recognition, natural language processing, and predictive analytics. They work closely with data scientists, software engineers, and domain experts to develop AI solutions that meet business requirements. AI engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of AI concepts and are passionate about building intelligent systems that can solve complex problems.",
+  });
+  const data_scientist_persona = new personaModel({
+    name: "Data Scientist",
+    description: "Data scientists are responsible for analyzing large datasets to extract valuable insights and make data-driven decisions. They work with structured and unstructured data to identify trends, patterns, and correlations that can inform business strategies. Data scientists use statistical analysis, machine learning, and data visualization techniques to uncover hidden patterns in data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data scientists are skilled in programming, data analysis, and machine learning. They have a strong background in mathematics, statistics, and computer science. Data scientists are curious, analytical, and detail-oriented professionals who are passionate about working with data to drive business success.",
+  });
+  const product_manager_persona = new personaModel({
+    name: "Product Manager",
+    description: "Product managers are responsible for defining the vision, strategy, and roadmap for a product or service. They work closely with cross-functional teams to develop and launch products that meet customer needs and business goals. Product managers conduct market research, gather customer feedback, and define product requirements to guide the development process. They collaborate with designers, engineers, and other stakeholders to deliver high-quality products on time and within budget. Product managers are skilled communicators who can articulate a clear product vision and motivate teams to achieve their goals. They have a deep understanding of user needs, market trends, and competitive landscape. Product managers are strategic thinkers who can prioritize initiatives and make data-driven decisions to drive product success.",
+  });
+  const quant_researcher_persona = new personaModel({
+    name: "Quantitative Researcher",
+    description: "Quantitative researchers are responsible for developing mathematical models and algorithms to analyze financial markets and make trading decisions. They work in quantitative finance, algorithmic trading, and risk management to develop quantitative strategies that generate profits for financial institutions. Quantitative researchers use statistical analysis, machine learning, and optimization techniques to build predictive models and trading algorithms. They work closely with traders, developers, and data scientists to implement and test their strategies in real-world trading environments. Quantitative researchers are skilled in mathematics, statistics, and programming. They have a deep understanding of financial markets, trading strategies, and risk management. Quantitative researchers are analytical, detail-oriented, and have a passion for solving complex problems in the financial industry.",
+  });
+  const ux_engineer_persona = new personaModel({
+    name: "UX Engineer",
+    description: "UX engineers are responsible for designing and developing user interfaces that are intuitive, engaging, and visually appealing. They work on web and mobile applications to create seamless user experiences that meet user needs and business goals. UX engineers conduct user research, create wireframes, and design prototypes to test and iterate on their designs. They collaborate with designers, product managers, and developers to deliver user-centered solutions that drive customer satisfaction and loyalty. UX engineers are skilled in user experience design, information architecture, and interaction design. They have a deep understanding of usability principles, accessibility standards, and design best practices. UX engineers are creative problem solvers who can translate user needs into elegant and effective design solutions.",
+  });
+  const data_analyst_persona = new personaModel({
+    name: "Data Analyst",
+    description: "Data analysts are responsible for collecting, analyzing, and interpreting data to help organizations make informed decisions. They work with structured and unstructured data to identify trends, patterns, and insights that can drive business strategies. Data analysts use statistical analysis, data visualization, and data mining techniques to extract valuable information from data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data analysts are skilled in data analysis, data visualization, and database management. They have a strong background in mathematics, statistics, and computer science. Data analysts are detail-oriented professionals who are passionate about working with data to uncover valuable insights and drive business success.",
+  });
+  const machine_learning_engineer_persona = new personaModel({
+    name: "Machine Learning Engineer",
+    description: "Machine learning engineers are responsible for developing machine learning models and algorithms to solve complex problems. They work on projects such as image recognition, natural language processing, and predictive analytics to build intelligent systems that can learn from data. Machine learning engineers use algorithms, data, and models to create machine learning applications that can make predictions and decisions. They work closely with data scientists, software engineers, and domain experts to develop machine learning solutions that meet business requirements. Machine learning engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of machine learning concepts and are passionate about building intelligent systems that can solve real-world problems.",
+  });
+
+  await personaModel.insertMany([
+    software_engineer_persona,
+    ai_engineer_persona,
+    data_scientist_persona,
+    product_manager_persona,
+    quant_researcher_persona,
+    ux_engineer_persona,
+    data_analyst_persona,
+    machine_learning_engineer_persona,
+  ]);
+
   // crypt default password
   const salt = await bcrypt.genSalt(10);
   const hashPassword = await bcrypt.hash("secret", salt);
+  const qumemberpassword = "shreyasnikam";
+  const qumemberhashPassword = await bcrypt.hash(qumemberpassword, salt);
+  const quadminpassword = "adminpassword";
+  const quadminhashPassword = await bcrypt.hash(quadminpassword, salt);
+
+
   const admin = new userModel({
     _id: mongoose.Types.ObjectId(1),
     name: "Admin",
@@ -36,9 +89,22 @@ async function seedDB() {
     _id: mongoose.Types.ObjectId(1),
     name: "admin",
     email: "admin@qusandbox.com",
-    password: await bcrypt.hash("adminpassword", salt),
+    password: quadminhashPassword,
     created_at: new Date(),
-    profile_image: `${process.env.APP_URL_API}/public/images/admin.jpg`,
+    profile_image: `https://media.licdn.com/dms/image/D4E03AQHcxJHgNthnfA/profile-displayphoto-shrink_200_200/0/1706052826111?e=2147483647&v=beta&t=5_VYJ1r49IsBJq9Vu9UR0NqR8lYs8bqCYzu62MZbnC0`,
+    linkedin_profile_id: "srikrishnamurthy",
+    summary: "• Chief Data Scientist and Founder of QuantUniversity, a Data Science & Machine Learning Advisory.  \n• AI and Machine Learning thought leader, speaker and writer.  \n• Expert in AI and Model Governance and adoption of Machine Learning in large enterprises.  \n• Author of forthcoming book 'AI & Risk Management in Finance: A practitioner's handbook' to be published by Wiley 2024  \n• Adjunct faculty at Northeastern University, Babson College and Hult International Business School  \n• Innovative and successful new business developer helping launch several significant, revenue-generating quantitative finance & Fintech applications  \n• Charted Financial Analyst (CFA)  \n• Inducted as a Certified Analytics Professional (CAP) by The Institute for Operations Research and the Management Sciences(INFORMS)  \nSpecialties: Analytics, AI , Data Science, Machine Learning, Fintech, Model Governance and Risk, Optimization, Algorithmic Trading, Quantitative Finance, Large Scale System Architecture",
+    headline: "CEO, QuantUniversity | AI Expert | Educator | Author | TedX Speaker |",
+    skills: ["Data Science", "Machine Learning", "Fintech", "Quantitative Finance", "Analytics", "CEO", "Founder", "CAD/CAM & Robotics Specialization", "CAD/CAM", "Robotics", "Artificial Intelligence"],
+    preferred_jobs: ["Data Scientist", "Data Science faculty", "Analytics faculty", "Chief Data Scientist", "Machine Learning faculty", "Quantitative Finance Lead", "Senior Consultant", "Senior Analytics Consultant", "Chief Data Scientist and CEO"],
+    preferred_locations: ["Boston", "Greater Boston Area", "Wellesley, MA", "Remote"],
+    education: "\nCollege: Babson College - Franklin W. Olin Graduate School of Business\nDegree: MBA, Finance, Graduated with Summa Cum Laude Honors, Ranked 3rd in the Class\nCollege: Northeastern University\nDegree: Master of Science, Computer Science\nTimeline: 2002-2005\nCollege: Northeastern University\nDegree: Master of Science, Computer Systems Engineering\nTimeline: 1999-2001\nCollege: Bangalore University\nDegree: Bachelor of Engineering, Mechanical Engineering\nTimeline: 1993-1997",
+    experience: "\nExperience:\nTitle: Data Science faculty, Northeastern University\nCompany Name: Northeastern University\nTitle: Founder and CEO\nCompany Name: QuantUniversity LLC.\nLocation: Greater Boston Area\nTitle: Analytics faculty, Babson College\nCompany Name: Babson College\nTitle: Senior Consultant/Quantitative Finance Lead\nCompany Name: The MathWorks\nTimeline: April 2008-May 2013\nTitle: Senior Analytics Consultant/Technical Team Lead\nCompany Name: Endeca\nTimeline: May 2006-April 2008\nTitle: Foreign Exchange Consultant\nCompany Name: Adaptive Edge Capital, Inc.\nTimeline: June 2007-December 2007\nTitle: Quantitative Research Manager\nCompany Name: Babson College Fund\nTimeline: May 2006-May 2007\nTitle: IT Analyst - Global Fixed Income Group\nCompany Name: Citigroup\nTimeline: February 2005-April 2006\nTitle: Enterprise Services Engineer\nCompany Name: PTC\nTimeline: November 2001-February 2005\nTitle: Graduate Engineer\nCompany Name: Larsen & Toubro Limited\nTimeline: September 1997-August 1999\n",
+    location_name: "Boston, MA",
+    resume_location: "https://qucoursify.s3.amazonaws.com/qu-skillbridge/admin@qusandbox.com/profile.pdf",
+    jobs_visited: [],
+    available_courses: [],
+    persona: data_scientist_persona._id,
   });
   const creator = new userModel({
     _id: mongoose.Types.ObjectId(2),
@@ -68,9 +134,39 @@ async function seedDB() {
     _id: mongoose.Types.ObjectId(3),
     name: "Shreyas",
     email: "shreyas@qusandbox.com",
-    password: await bcrypt.hash("shreyasnikam", salt),
+    password: qumemberhashPassword,
     created_at: new Date(),
-    profile_image: `${process.env.APP_URL_API}/public/images/member.jpg`,
+    linkedin_profile_id: "nikam-shreyas",
+    summary: "Once upon a time, in the world of wires and widgets, I embarked on a quest to make life a tad more convenient. I love automation; from programming my devices (my iPhone, iPad, and my Mac) to chirp when their batteries reach full charge, to orchestrating Artificial Intelligence and Machine Learning to tackle more complex challenges; I. Automate. Everything.  \nOne day, armed with code and a vision, I entered my very first hackathon. The challenge? Craft a solution that wowed. And wow, it did! My web scraping marvel not only snagged the Best Performance Award but also unlocked a new chapter in my journey.  \nThat hackathon victory was a beacon, leading me to my first internship. The world of software development became my canvas, where I painted with pixels and forged applications that made life a bit more seamless.  \nYet, amidst web development, mobile app development, and building desktop applications, it was in the realm of machine learning and deep learning that I found my true calling. The dance with data, the symphony of algorithms, and the thrill of teaching machines to think - it was like painting with a palette of ones and zeros. This led me to pursue my Master's in Artificial Intelligence and brought me to Boston!  \nBeyond bits and bytes, my love for language flourishes. I am fluent in three tongues and have eagerly embraced a fourth. But why stop there? I plan to learn Braille and sign language too, promising new worlds of communication.  \nNow, I stand at a crossroads, ready for the next adventure. Eager to infuse creativity, expertise, and a dash of unconventional thinking into a team that, like me, believes in pushing boundaries and redefining what's possible. So, let's connect and see where the conversation leads to!",
+    headline: "Data Science @ Changing The Present | AI/ML Engineer",
+    skills: [
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Python",
+      "Tensorflow",
+      "SQL",
+      "NoSQL",
+      "Docker",
+      "streamlit"
+    ],
+    preferred_jobs: [
+      "Machine Learning Engineer",
+      "Data Scientist"
+    ],
+    preferred_locations: [
+      "Boston",
+      "San Francisco",
+      "Seattle"
+    ],
+    profile_image: "https://media.licdn.com/dms/image/D4E03AQF9TjnNK2PeAg/profile-displayphoto-shrink_200_200/0/1710692989211?e=2147483647&v=beta&t=M4n6f0UhSsw5W0yP9CndcuNQVAzAlKe6pmHP4Tu-u8w",
+    education: "Education: \nCollege: Northeastern University\nDegree: Master's in Artificial Intelligence\nTimeline: 2021 - 2023\n\nCollege: Pune Instititue of Computer Technology\nDegree: Bachelor of Engineering in Computer Enginnering (Computer Science)\nTimeline: 2017 - 2021",
+    experience: "Experience: \nTitle: Technical Lead\nCompany Name: QuantUniversity Professional Education\nTimeline: Jan 2024 - Present\n\nTitle: Data Science Intern\nCompany Name: Changing The Present\nTimeline: Sep 2023 - Dec 2023\n\nTitle: Student Success Guide\nCompany Name: Northeastern University\nTimeline: Jan 2022 - Apr 2023\n\nTitle: Graduate Teaching Assistant\nCompany Name: Northeastern University\nTimeline: Jan 2022 - Apr 2023\n\nTitle: Data Research Intern\nCompany Name: BoomPanda\nTimeline: Jan 2021 - Jun 2021\n\nTitle: Software Development Intern\nCompany Name: TECH SQUARE\nTimeline: Jun 2019 - Jan 2020\n\nTitle: Software Development Intern\nCompany Name: Riskpro Management Consulting Private Limited\nTimeline: Mar 2019 - May 2019",
+    location_name: "Boston, Massachusetts",
+    resume_location: "https://qucoursify.s3.amazonaws.com/qu-skillbridge/shreyas@qusandbox.com/profile.pdf",
+    jobs_visited: [],
+    available_courses: [],
+    persona: ai_engineer_persona._id,
   });
 
 
@@ -250,50 +346,6 @@ async function seedDB() {
   await itemModel.insertMany([item1, item2, item3]);
 
 
-  // add personas
-  const software_engineer_persona = new personaModel({
-    name: "Software Engineer",
-    description: "Software engineers are responsible for developing, testing, deploying, and maintaining software applications. They work closely with product managers, designers, and other engineers to create high-quality software products. Software engineers use programming languages, frameworks, and tools to build scalable and reliable software solutions. They are skilled problem solvers who can analyze complex technical challenges and design effective solutions. Software engineers are detail-oriented and have a passion for writing clean, efficient code. They are constantly learning and adapting to new technologies to stay current in the fast-paced software development industry.",
-  });
-  const ai_engineer_persona = new personaModel({
-    name: "AI Engineer",
-    description: "AI engineers are responsible for developing artificial intelligence (AI) and machine learning (ML) solutions. They work on cutting-edge technologies to build intelligent systems that can learn, reason, and make decisions. AI engineers use algorithms, data, and models to create AI applications that can perform tasks such as image recognition, natural language processing, and predictive analytics. They work closely with data scientists, software engineers, and domain experts to develop AI solutions that meet business requirements. AI engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of AI concepts and are passionate about building intelligent systems that can solve complex problems.",
-  });
-  const data_scientist_persona = new personaModel({
-    name: "Data Scientist",
-    description: "Data scientists are responsible for analyzing large datasets to extract valuable insights and make data-driven decisions. They work with structured and unstructured data to identify trends, patterns, and correlations that can inform business strategies. Data scientists use statistical analysis, machine learning, and data visualization techniques to uncover hidden patterns in data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data scientists are skilled in programming, data analysis, and machine learning. They have a strong background in mathematics, statistics, and computer science. Data scientists are curious, analytical, and detail-oriented professionals who are passionate about working with data to drive business success.",
-  });
-  const product_manager_persona = new personaModel({
-    name: "Product Manager",
-    description: "Product managers are responsible for defining the vision, strategy, and roadmap for a product or service. They work closely with cross-functional teams to develop and launch products that meet customer needs and business goals. Product managers conduct market research, gather customer feedback, and define product requirements to guide the development process. They collaborate with designers, engineers, and other stakeholders to deliver high-quality products on time and within budget. Product managers are skilled communicators who can articulate a clear product vision and motivate teams to achieve their goals. They have a deep understanding of user needs, market trends, and competitive landscape. Product managers are strategic thinkers who can prioritize initiatives and make data-driven decisions to drive product success.",
-  });
-  const quant_researcher_persona = new personaModel({
-    name: "Quantitative Researcher",
-    description: "Quantitative researchers are responsible for developing mathematical models and algorithms to analyze financial markets and make trading decisions. They work in quantitative finance, algorithmic trading, and risk management to develop quantitative strategies that generate profits for financial institutions. Quantitative researchers use statistical analysis, machine learning, and optimization techniques to build predictive models and trading algorithms. They work closely with traders, developers, and data scientists to implement and test their strategies in real-world trading environments. Quantitative researchers are skilled in mathematics, statistics, and programming. They have a deep understanding of financial markets, trading strategies, and risk management. Quantitative researchers are analytical, detail-oriented, and have a passion for solving complex problems in the financial industry.",
-  });
-  const ux_engineer_persona = new personaModel({
-    name: "UX Engineer",
-    description: "UX engineers are responsible for designing and developing user interfaces that are intuitive, engaging, and visually appealing. They work on web and mobile applications to create seamless user experiences that meet user needs and business goals. UX engineers conduct user research, create wireframes, and design prototypes to test and iterate on their designs. They collaborate with designers, product managers, and developers to deliver user-centered solutions that drive customer satisfaction and loyalty. UX engineers are skilled in user experience design, information architecture, and interaction design. They have a deep understanding of usability principles, accessibility standards, and design best practices. UX engineers are creative problem solvers who can translate user needs into elegant and effective design solutions.",
-  });
-  const data_analyst_persona = new personaModel({
-    name: "Data Analyst",
-    description: "Data analysts are responsible for collecting, analyzing, and interpreting data to help organizations make informed decisions. They work with structured and unstructured data to identify trends, patterns, and insights that can drive business strategies. Data analysts use statistical analysis, data visualization, and data mining techniques to extract valuable information from data. They work closely with business stakeholders to understand their requirements and develop data-driven solutions. Data analysts are skilled in data analysis, data visualization, and database management. They have a strong background in mathematics, statistics, and computer science. Data analysts are detail-oriented professionals who are passionate about working with data to uncover valuable insights and drive business success.",
-  });
-  const machine_learning_engineer_persona = new personaModel({
-    name: "Machine Learning Engineer",
-    description: "Machine learning engineers are responsible for developing machine learning models and algorithms to solve complex problems. They work on projects such as image recognition, natural language processing, and predictive analytics to build intelligent systems that can learn from data. Machine learning engineers use algorithms, data, and models to create machine learning applications that can make predictions and decisions. They work closely with data scientists, software engineers, and domain experts to develop machine learning solutions that meet business requirements. Machine learning engineers are skilled in programming, data analysis, and machine learning techniques. They have a deep understanding of machine learning concepts and are passionate about building intelligent systems that can solve real-world problems.",
-  });
-
-  await personaModel.insertMany([
-    software_engineer_persona,
-    ai_engineer_persona,
-    data_scientist_persona,
-    product_manager_persona,
-    quant_researcher_persona,
-    ux_engineer_persona,
-    data_analyst_persona,
-    machine_learning_engineer_persona,
-  ]);
 
   // add courses
   let courses_list = []
