@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "passport";
-import { createUserRoute, deleteUserRoute, editUserRoute, getUserRoute,getUsersRoute } from "../../services/users";
+import { createUserRoute, deleteUserRoute, editUserRoute, getUserRoute, getUsersRoute, udpateUserRoute } from "../../services/users";
 import jwt from 'jsonwebtoken';
 const router = express.Router();
 
@@ -17,7 +17,7 @@ router.get("/:id", passport.authenticate("jwt", { session: false }), async (req,
 });
 
 router.patch("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {
-  await editUserRoute(req, res);
+  await udpateUserRoute(req, res);
 });
 
 router.delete("/:id", passport.authenticate("jwt", { session: false }), async (req, res) => {

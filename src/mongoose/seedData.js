@@ -1,13 +1,17 @@
 import bcrypt from "bcrypt";
 import mongoose from "mongoose";
 import { dbConnect } from "./index.js";
-
-import { userModel } from "../schemas/user.schema.js";
+import courses from "./courses.js";
+import jobs from "./jobs.js";
 import { roleModel } from "../schemas/role.schema.js";
 import { permissionModel } from "../schemas/permission.schema.js";
 import { tagModel } from "../schemas/tag.schema.js";
 import { categoryModel } from "../schemas/category.schema.js";
 import { itemModel } from "../schemas/item.schema.js";
+import { personaModel } from "../schemas/persona.schema.js";
+import { jobModel } from "../schemas/job.schema.js";
+import { courseModel } from "../schemas/course.schema.js";
+import { userModel } from "../schemas/user.schema.js";
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -28,11 +32,27 @@ async function seedDB() {
     created_at: new Date(),
     profile_image: `${process.env.APP_URL_API}/public/images/admin.jpg`,
   });
+  const quadmin = new userModel({
+    _id: mongoose.Types.ObjectId(1),
+    name: "admin",
+    email: "admin@qusandbox.com",
+    password: await bcrypt.hash("adminpassword", salt),
+    created_at: new Date(),
+    profile_image: `${process.env.APP_URL_API}/public/images/admin.jpg`,
+  });
   const creator = new userModel({
     _id: mongoose.Types.ObjectId(2),
     name: "Creator",
     email: "creator@jsonapi.com",
     password: hashPassword,
+    created_at: new Date(),
+    profile_image: `${process.env.APP_URL_API}/public/images/creator.jpg`,
+  });
+  const qucreator = new userModel({
+    _id: mongoose.Types.ObjectId(2),
+    name: "creator",
+    email: "creator@qusandbox.com",
+    password: await bcrypt.hash("creatorpassword", salt),
     created_at: new Date(),
     profile_image: `${process.env.APP_URL_API}/public/images/creator.jpg`,
   });
@@ -44,6 +64,15 @@ async function seedDB() {
     created_at: new Date(),
     profile_image: `${process.env.APP_URL_API}/public/images/member.jpg`,
   });
+  const qumember = new userModel({
+    _id: mongoose.Types.ObjectId(3),
+    name: "Shreyas",
+    email: "shreyas@qusandbox.com",
+    password: await bcrypt.hash("shreyasnikam", salt),
+    created_at: new Date(),
+    profile_image: `${process.env.APP_URL_API}/public/images/member.jpg`,
+  });
+
 
   // user permission
   const perm1 = await permissionModel({ created_at: new Date(), name: "view users" });
@@ -96,19 +125,27 @@ async function seedDB() {
     perm21,
   ]);
 
-  const roleAdmin = new roleModel({ _id:  mongoose.Types.ObjectId(1), name: "admin", created_at: new Date(), users: [admin], permissions: [perm1._id, perm2._id, perm3._id, perm4._id, perm5._id, perm6._id, perm7._id, perm8._id, 
-    perm9._id, perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id] });
+  const roleAdmin = new roleModel({
+    _id: mongoose.Types.ObjectId(1), name: "admin", created_at: new Date(), users: [admin], permissions: [perm1._id, perm2._id, perm3._id, perm4._id, perm5._id, perm6._id, perm7._id, perm8._id,
+    perm9._id, perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id]
+  });
   await roleAdmin.save();
   admin.role = roleAdmin._id;
+  quadmin.role = roleAdmin._id;
   await admin.save();
-  const roleCreator = new roleModel({  _id: mongoose.Types.ObjectId(2), name: "creator", created_at: new Date(), users: [creator], permissions: [perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id] });
+  await quadmin.save();
+  const roleCreator = new roleModel({ _id: mongoose.Types.ObjectId(2), name: "creator", created_at: new Date(), users: [creator], permissions: [perm10._id, perm11._id, perm12._id, perm13._id, perm14._id, perm15._id, perm16._id, perm17._id, perm18._id, perm19._id, perm20._id, perm21._id] });
   await roleCreator.save();
   creator.role = roleCreator._id;
+  qucreator.role = roleCreator._id;
   await creator.save();
-  const roleMember = new roleModel({  _id:  mongoose.Types.ObjectId(3),  name: "member", created_at: new Date(), users: [member], permissions: [perm10._id, perm11._id, perm15._id, perm18._id] });
+  await qucreator.save();
+  const roleMember = new roleModel({ _id: mongoose.Types.ObjectId(3), name: "member", created_at: new Date(), users: [member], permissions: [perm10._id, perm11._id, perm15._id, perm18._id] });
   await roleMember.save();
   member.role = roleMember._id;
+  qumember.role = roleMember._id;
   await member.save();
+  await qumember.save();
 
   const cat1 = new categoryModel({
     name: "Travel",
@@ -141,7 +178,7 @@ async function seedDB() {
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet nulla nulla. Donec luctus lorem justo, ut ullamcorper eros pellentesque ut. Etiam scelerisque dapibus lorem, vitae maximus ante condimentum quis. Maecenas ac arcu a lacus aliquet elementum posuere id nunc. Curabitur sem lorem, faucibus ac enim ut, vestibulum feugiat ante. Fusce hendrerit leo nibh, nec consectetur nulla venenatis et. Nulla tincidunt neque quam, sit amet tincidunt quam blandit in. Nunc fringilla rutrum tortor, sit amet bibendum augue convallis a. Etiam mauris orci, sollicitudin eu condimentum sed, dictum ut odio. Sed vel ligula in lectus scelerisque ornare.Mauris dolor nisl, finibus eget sem in, ultrices semper libero. Nullam accumsan suscipit tortor, a vestibulum sapien imperdiet quis. Donec pretium mauris quis lectus sodales accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt semper orci eu molestie. Vivamus fermentum enim vitae magna elementum, quis iaculis augue tincidunt. Donec fermentum quam facilisis sem dictum rutrum. Nunc nec urna lectus. Nulla nec ultrices lorem. Integer ac ante massa.",
-    image:`${process.env.APP_URL_API}/public/images/product.jpg`,
+    image: `${process.env.APP_URL_API}/public/images/product.jpg`,
     is_on_homepage: false,
     date_at: new Date(),
     created_at: new Date(),
@@ -153,7 +190,7 @@ async function seedDB() {
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet nulla nulla. Donec luctus lorem justo, ut ullamcorper eros pellentesque ut. Etiam scelerisque dapibus lorem, vitae maximus ante condimentum quis. Maecenas ac arcu a lacus aliquet elementum posuere id nunc. Curabitur sem lorem, faucibus ac enim ut, vestibulum feugiat ante. Fusce hendrerit leo nibh, nec consectetur nulla venenatis et. Nulla tincidunt neque quam, sit amet tincidunt quam blandit in. Nunc fringilla rutrum tortor, sit amet bibendum augue convallis a. Etiam mauris orci, sollicitudin eu condimentum sed, dictum ut odio. Sed vel ligula in lectus scelerisque ornare.Mauris dolor nisl, finibus eget sem in, ultrices semper libero. Nullam accumsan suscipit tortor, a vestibulum sapien imperdiet quis. Donec pretium mauris quis lectus sodales accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt semper orci eu molestie. Vivamus fermentum enim vitae magna elementum, quis iaculis augue tincidunt. Donec fermentum quam facilisis sem dictum rutrum. Nunc nec urna lectus. Nulla nec ultrices lorem. Integer ac ante massa.",
-    image:`${process.env.APP_URL_API}/public/images/product.jpg`,
+    image: `${process.env.APP_URL_API}/public/images/product.jpg`,
     is_on_homepage: false,
     date_at: new Date(),
     created_at: new Date(),
@@ -165,7 +202,7 @@ async function seedDB() {
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet nulla nulla. Donec luctus lorem justo, ut ullamcorper eros pellentesque ut. Etiam scelerisque dapibus lorem, vitae maximus ante condimentum quis. Maecenas ac arcu a lacus aliquet elementum posuere id nunc. Curabitur sem lorem, faucibus ac enim ut, vestibulum feugiat ante. Fusce hendrerit leo nibh, nec consectetur nulla venenatis et. Nulla tincidunt neque quam, sit amet tincidunt quam blandit in. Nunc fringilla rutrum tortor, sit amet bibendum augue convallis a. Etiam mauris orci, sollicitudin eu condimentum sed, dictum ut odio. Sed vel ligula in lectus scelerisque ornare.Mauris dolor nisl, finibus eget sem in, ultrices semper libero. Nullam accumsan suscipit tortor, a vestibulum sapien imperdiet quis. Donec pretium mauris quis lectus sodales accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt semper orci eu molestie. Vivamus fermentum enim vitae magna elementum, quis iaculis augue tincidunt. Donec fermentum quam facilisis sem dictum rutrum. Nunc nec urna lectus. Nulla nec ultrices lorem. Integer ac ante massa.",
-    image:`${process.env.APP_URL_API}/public/images/product.jpg`,
+    image: `${process.env.APP_URL_API}/public/images/product.jpg`,
     is_on_homepage: false,
     date_at: new Date(),
     created_at: new Date(),
@@ -203,8 +240,38 @@ async function seedDB() {
   item3.tags.push(tag3);
   await itemModel.insertMany([item1, item2, item3]);
 
+  
+
+
+  // add courses
+  for (let index = 0; index < courses.length; index++) {
+    const course = courses[index];
+    let newCourse = new courseModel({});
+    // for key in course add key to newcourse
+    for (const key in course) {
+      if (Object.hasOwnProperty.call(course, key)) {
+        newCourse[key] = course[key];
+      }
+    }
+    await newCourse.save();
+  }
+
+  // add jobs for each persona
+  for (let index = 0; index < jobs.length; index++) {
+    const job = jobs[index];
+    let newJob = new jobModel({});
+    // for key in job add key to newjob
+    for (const key in job) {
+      if (Object.hasOwnProperty.call(job, key)) {
+        newJob[key] = job[key];
+      }
+    }
+    await newJob.save();
+  }
+
   console.log("DB seeded");
 }
+
 
 seedDB().then(() => {
   mongoose.connection.close();

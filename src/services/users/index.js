@@ -350,7 +350,7 @@ export const editUserRoute = async (req, res) => {
   if (foundUserWithEmail && foundUserWithEmail.id !== foundUser.id) {
     return res
       .status(400)
-      .json({ errors: [{detail: "The email has already been taken"}] });
+      .json({ errors: [{ detail: "The email has already been taken" }] });
   }
 
   const updatedUser = await userModel.updateOne(
@@ -404,4 +404,65 @@ export const deleteUserRoute = async (req, res) => {
       console.error(err);
     }
   }
+};
+
+
+export const udpateUserRoute = async (req, res) => {
+  const userId = req.params.id;
+  const user = await userModel.findById(userId);
+  if (!user) {
+    return res.status(404).send({ message: "User not found" });
+  }
+
+  const updateFields = req.body.data.attributes;
+  await userModel.updateOne({
+    _id: userId
+  }, updateFields);
+
+  const updatedUser = await userModel.findById(userId);
+  const sentData = {
+    data: {
+      type: "users",
+      id: updatedUser.id,
+      attributes: {
+        ...updatedUser._doc,
+      },
+    },
+  };
+  return res.status(200).send(sentData);
+};
+
+export const addJobVisistedToUserRoute = async (req, res) => {
+  const { userId, jobId } = req.params;
+  const user = await userModel.findById(userId);
+  if (!user) {
+    return res.status(404).send({ message: "User not found" });
+  }
+
+  const job = await jobModel.findById(jobId);
+  if (!job) {
+    return res.status(404).send({ message: "Job not found" });
+  }
+
+  const updatedUser = await userModel
+    .findByIdAndUpdate(userId, { jobs_visited: [...user.jobs_visited, job] }, { new: true });
+
+  return res.status(200).send(updatedUser);
+};
+
+export const addAvailableCoursesToUserRoute = async (req, res) => {
+  const { userId, courseId } = req.params;
+
+  const user = await userModel.findById(userId);
+  if (!user) {
+    return res.status(404).send({ message: "User not found" });
+  }
+
+  const course = await courseModel.findById(courseId);
+  if (!course) {
+    return res.status(404).send({ message: "Course not found" });
+  }
+
+  const updatedUser = await userModel.findByIdAndUpdate(userId, { available_courses: [...user.available_courses, course] }, { new: true });
+  return res.status(200).send(updatedUser);
 };
