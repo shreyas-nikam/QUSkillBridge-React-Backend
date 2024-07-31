@@ -5,6 +5,7 @@
   "main": "index.js",
   "homepage": "node-json-api-pro.creative-tim.com/",
   "dependencies": {
+    "@google/generative-ai": "^0.16.0",
     "@langchain/openai": "^0.2.5",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
