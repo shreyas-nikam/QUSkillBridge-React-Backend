@@ -18,8 +18,9 @@ router.post("/logout", (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  const { name, email, password } = req.body.data.attributes;
-  await registerRouteHandler(req, res, name, email, password);
+  console.log(req.body.data.attributes);
+  const { name, email, password, linkedin_profile_id } = req.body.data.attributes;
+  await registerRouteHandler(req, res, name, email, password, linkedin_profile_id);
 });
 
 router.post("/password-forgot", async (req, res) => {

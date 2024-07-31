@@ -9,11 +9,11 @@ const userSchema = new mongoose.Schema({
   linkedin_profile_id: { type: String },
   summary: { type: String },
   headline: { type: String },
-  skills: { type: [String] },
+  skills: { type: [Object] },
   preferred_jobs: { type: [String] },
   preferred_locations: { type: [String] },
-  education: { type: [String] },
-  experience: { type: [String] },
+  education: { type: [Object] },
+  experience: { type: [Object] },
   location_name: { type: String },
   created_at: { type: Date },
   updated_at: { type: Date },
@@ -22,6 +22,12 @@ const userSchema = new mongoose.Schema({
   jobs_visited: { type: [mongoose.Schema.Types.ObjectId], ref: "JobsVisited" },
   available_courses: { type: [mongoose.Schema.Types.ObjectId], ref: "Course" },
   persona: { type: mongoose.Schema.Types.ObjectId, ref: "Persona" },
+  courses_taken: { type: [Object] },
+  publications: { type: [Object] },
+  projects: { type: [Object] },
+  certifications: { type: [Object] },
+  patents: { type: [Object] },
+  awards: { type: [Object] },
 });
 
 userSchema.virtual("id").get(function () {

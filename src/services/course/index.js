@@ -88,3 +88,5 @@ export const deleteCourseRoute = async (req, res) => {
     }
     return res.status(200).send({ data: course });
 };
+
+
