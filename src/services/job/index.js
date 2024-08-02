@@ -98,7 +98,15 @@ export const getJobsByPersonaRoute = async (req, res) => {
     if (!user) {
         return res.status(404).send({ message: "User not found" });
     }
-    const personaId = user.persona;
+    const personaName = user.persona;
+
+    // get id of persona from persona collections
+    const persona = await personaModel.find({ name: personaName });
+    if (!persona) {
+        return res.status(404).send({ message: "Persona not found" });
+    }
+    const personaId = persona._id;
+
     const jobs = await jobModel.find({
         persona: personaId
     });

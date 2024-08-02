@@ -12,6 +12,7 @@ import { personaModel } from "../schemas/persona.schema.js";
 import { jobModel } from "../schemas/job.schema.js";
 import { courseModel } from "../schemas/course.schema.js";
 import { userModel } from "../schemas/user.schema.js";
+import { jobsVisitedModel } from "../schemas/jobsVisited.schema.js";
 
 import dotenv from 'dotenv';
 dotenv.config();
