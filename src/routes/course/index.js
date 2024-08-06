@@ -29,5 +29,9 @@ router.delete('/:id', passport.authenticate('jwt', { session: false }), async (r
     await deleteCourseRoute(req, res);
 });
 
+router.get("/availableCourses/:userId", passport.authenticate('jwt', { session: false }), async (req, res) => {
+    await getAvailableCoursesRoute(req, res);
+});
+
 
 export default router;

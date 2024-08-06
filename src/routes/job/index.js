@@ -35,4 +35,13 @@ router.get('/personaJobs/:userId', passport.authenticate('jwt', { session: false
     await getJobsByPersonaRoute(req, res);
 });
 
+router.get("/visitedJob/:jobId", passport.authenticate('jwt', { session: false }), async (req, res) => {
+    await getVisitedJobRoute(req, res);
+});
+
+router.get("/visitedJobs/:userId", passport.authenticate('jwt', { session: false }), async (req, res) => {
+    await getVisitedJobsRoute(req, res);
+});
+
+
 export default router;

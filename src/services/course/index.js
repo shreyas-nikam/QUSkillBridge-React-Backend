@@ -55,7 +55,7 @@ export const getCoursesRoute = async (req, res) => {
     });
 
     const sentData = { data: [...coursesObjectArray] };
-    
+
     return res.status(200).send(sentData);
 };
 
@@ -89,4 +89,17 @@ export const deleteCourseRoute = async (req, res) => {
     return res.status(200).send({ data: course });
 };
 
+export const getAvailableCoursesRoute = async (req, res) => {
+    const user = await userModel.findById(req.params.userId);
+    if (!user) {
+        return res.status(404).send({ message: "User not found" });
+    }
+    const availableCoursesIds = user.available_courses;
+    let availableCourses = [];
+    availableCoursesIds.forEach(async (courseId) => {
+        const course = await courseModel.findById(courseId);
+        availableCourses.push(course);
+    });
+    return res.status(200).send({ data: availableCourses });
+}
 

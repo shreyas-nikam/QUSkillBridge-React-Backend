@@ -1,5 +1,7 @@
 import { jobModel } from "../../schemas/job.schema";
+import { jobsVisitedModel } from "../../schemas/jobsVisited.schema";
 import { userModel } from "../../schemas/user.schema";
+import { personaModel } from "../../schemas/persona.schema";
 
 export const getJobsRoute = async (req, res) => {
     let jobsObjectArray = [];
@@ -66,6 +68,48 @@ export const getJobRoute = async (req, res) => {
         return res.status(404).send({ message: "Job not found" });
     }
     return res.status(200).send(job);
+};
+
+
+export const getVisitedJobRoute = async (req, res) => {
+    const { jobId } = req.params;
+    const jobVisited = await jobsVisitedModel.findById(jobId);
+    if (!jobVisited) {
+        return res.status(404).send({ message: "Job not found" });
+    }
+    const job = await jobModel.findById(jobVisited.job);
+    if (!job) {
+        return res.status(404).send({ message: "Job not found" });
+    }
+    // populate the job details field in the jobVisited object
+    jobVisited.job = job;
+    return res.status(200).send(jobVisited);
+}
+
+export const getVisitedJobsRoute = async (req, res) => {
+    const { userId } = req.params;
+    const user = await userModel.findById(userId);
+    if (!user) {
+        return res.status(404).send({ message: "User not found" });
+    }
+    let jobsArray = user.jobs_visited;
+    let jobsVisitedArray = [];
+    for (let i = 0; i < jobsArray.length; i++) {
+        const jobVisited = await jobsVisitedModel.findById(jobsArray[i]);
+        if (!jobVisited) {
+            // do nothing
+            continue;
+        }
+        const job = await jobModel.findById(jobVisited.job);
+        if (!job) {
+            // do nothing
+            continue;
+        }
+        // populate the job details field in the jobVisited object
+        jobVisited.job = job;
+        jobsVisitedArray.push(jobVisited);
+    }
+    return res.status(200).send(jobsVisitedArray);
 };
 
 export const createJobRoute = async (req, res) => {
