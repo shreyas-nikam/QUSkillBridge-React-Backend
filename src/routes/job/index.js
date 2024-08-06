@@ -1,7 +1,17 @@
 import express from "express";
 import passport from "passport";
 
-import { createJobRoute, deleteJobRoute, editJobRoute, getJobRoute, getJobsRoute, getJobsByPersonaRoute } from "../../services/job";
+import {
+    createJobRoute,
+    deleteJobRoute,
+    editJobRoute,
+    getJobRoute,
+    getJobsRoute,
+    getJobsByPersonaRoute,
+    addJobToVisitedJobsRoute,
+    getVisitedJobRoute,
+    getVisitedJobsRoute
+} from "../../services/job";
 
 const router = express.Router();
 
@@ -41,6 +51,10 @@ router.get("/visitedJob/:jobId", passport.authenticate('jwt', { session: false }
 
 router.get("/visitedJobs/:userId", passport.authenticate('jwt', { session: false }), async (req, res) => {
     await getVisitedJobsRoute(req, res);
+});
+
+router.post("/addJobToVisitedJobs/", passport.authenticate('jwt', { session: false }), async (req, res) => {
+    await addJobToVisitedJobsRoute(req, res);
 });
 
 

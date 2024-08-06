@@ -161,3 +161,20 @@ export const getJobsByPersonaRoute = async (req, res) => {
     return res.status(200).send(jobs);
 };
 
+
+export const addJobToVisitedJobsRoute = async (req, res) => {
+    const { profile_id, job_id } = req.body;
+    const user = await userModel.findById(profile_id);
+    if (!user) {
+        return res.status(404).send({ message: "User not found" });
+    }
+    const job = await jobModel.findById(job_id);
+    if (!job) {
+        return res.status(404).send({ message: "Job not found" });
+    }
+    const jobVisited = new jobsVisitedModel({ job: job_id });
+    await jobVisited.save();
+    user.jobs_visited.push(jobVisited);
+    await user.save();
+    return res.status(201).send(jobVisited);
+}
